@@ -1,0 +1,8 @@
+.main-content.collapsed {
+  margin-right: 1%; 
+}
+
+.main-div{
+  display: flex;
+  min-height: 100vh;
+}

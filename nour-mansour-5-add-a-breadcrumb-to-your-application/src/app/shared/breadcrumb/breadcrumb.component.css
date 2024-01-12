@@ -1,0 +1,19 @@
+.custom-breadcrumb {
+  font-weight: 500;
+}
+
+::ng-deep.p-menuitem-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+::ng-deep.p-icon-wrapper {
+  color: #007bff;
+}
+::ng-deep.p-breadcrumb {
+  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+}

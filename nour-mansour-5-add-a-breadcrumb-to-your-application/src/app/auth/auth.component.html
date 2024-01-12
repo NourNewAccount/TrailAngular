@@ -1,0 +1,66 @@
+<div class="auth-container">
+  <h2>{{ isLoginForm ? "Login" : "Sign Up" }}</h2>
+
+  <form [formGroup]="authForm" (ngSubmit)="submitForm()">
+    <!-- Common fields for both login and sign-up -->
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" formControlName="username" />
+      <div
+        class="requiredMsg"
+        *ngIf="
+          authForm.get('username')?.hasError('required') &&
+          authForm.get('username')?.touched
+        "
+      >
+        Username is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password" />
+      <div
+        class="requiredMsg"
+        *ngIf="
+          authForm.get('password')?.hasError('required') &&
+          authForm.get('password')?.touched
+        "
+      >
+        Password is required.
+      </div>
+    </div>
+
+    <!-- Additional fields for sign-up -->
+    <div *ngIf="!isLoginForm" class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        formControlName="confirmPassword"
+      />
+      <div
+        class="requiredMsg"
+        *ngIf="
+          authForm.get('confirmPassword')?.hasError('required') &&
+          authForm.get('confirmPassword')?.touched
+        "
+      >
+        Confirm Password is required.
+      </div>
+
+      <div class="requiredMsg" *ngIf="mismatch">Passwords do not match.</div>
+    </div>
+
+    <button type="submit">{{ isLoginForm ? "Login" : "Sign Up" }}</button>
+  </form>
+
+  <p>{{ message }}</p>
+
+  <!-- Switch between login and sign-up forms -->
+  <div class="switch-form">
+    <button class="switch-button" (click)="toggleForm()">
+      {{ isLoginForm ? "Switch to Sign Up" : "Switch to Login" }}
+    </button>
+  </div>
+</div>

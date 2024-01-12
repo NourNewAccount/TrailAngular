@@ -1,0 +1,27 @@
+:host {
+  display: block;
+  width: fit-content;
+  max-width: 90vw;
+  min-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+div {
+  position: relative;
+}
+
+.close-icon {
+  cursor: pointer;
+  position: absolute;
+  font-size: 24px;
+  top: -20px;
+  right: 10px;
+}

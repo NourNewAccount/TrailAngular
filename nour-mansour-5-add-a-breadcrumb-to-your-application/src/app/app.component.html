@@ -1,0 +1,27 @@
+<div *ngIf="isAuthenticated$ | async as isAuthenticated; else authComponent">
+  <app-navbar></app-navbar>
+
+  <div class="main-div">
+    <!-- Your main content goes here -->
+    <div [style.width.%]="sidebarService.sidebarWidth">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div
+      style="
+        align-self: start;
+        padding-top: 60px;
+        transition: width 0.8s ease-out-in, margin-left 0.8s ease-out-in;
+        padding-left: 20px;
+      "
+      [style.width.%]="sidebarService.remianWidth"
+    >
+      <app-breadcrumb></app-breadcrumb>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<ng-template #authComponent>
+  <app-auth></app-auth>
+  <router-outlet></router-outlet>
+</ng-template>

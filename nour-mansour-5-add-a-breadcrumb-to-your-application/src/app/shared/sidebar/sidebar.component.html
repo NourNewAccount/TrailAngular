@@ -1,0 +1,95 @@
+<div class="sidebar" [style.width.%]="sidebarWidth">
+  <div *ngIf="expanded">
+    <!-- Toggle Button -->
+    <div class="sidebar-button" (click)="toggleSidebarWidth()">
+      <i class="fas fa-bars"></i>
+      <button class="toggle-btn">My panel</button>
+    </div>
+
+    <!-- Sidebar Buttons -->
+    <div style="padding-left: 10px">
+      <div class="sidebar-button">
+        <i class="fas fa-home"></i>
+        <button (click)="navigateTo('/')">General</button>
+      </div>
+
+      <!-- Add a divider between buttons -->
+      <div class="divider"></div>
+
+      <div style="flex-direction: column" class="sidebar-button">
+        <div class="sidebar-button">
+          <i class="fas fa-tasks"></i>
+          <button (click)="toggleTasksMenu()">Tasks</button>
+        </div>
+
+        <!-- Sub-menu for Tasks -->
+        <div *ngIf="showTasksMenu">
+          <button (click)="navigateTo('/tasks')">Display</button>
+          <button (click)="navigateTo('/tasks/create')">Create</button>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="sidebar-button">
+        <i class="fas fa-life-ring"></i>
+        <button (click)="navigateTo('/support')">Support</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="sidebar-button">
+        <i class="fas fa-bell"></i>
+        <button (click)="navigateTo('/reminders')">Reminders</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!expanded" [ngStyle]="{ transform: 'translateX(10px)' }">
+    <!-- Content to show when not expanded -->
+    <!-- Toggle Button -->
+    <div
+      class="sidebar-button"
+      (click)="toggleSidebarWidth()"
+      style="padding-top: 20px"
+    >
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Sidebar Buttons -->
+    <div
+      style="
+        padding-top: 20px;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      "
+    >
+      <div class="sidebar-button" (click)="navigateTo('/')">
+        <i class="fas fa-home"></i>
+      </div>
+
+      <div style="flex-direction: column" class="sidebar-button">
+        <div class="sidebar-button" (click)="toggleTasksMenu()">
+          <i class="fas fa-tasks"></i>
+        </div>
+
+        <!-- Sub-menu for Tasks -->
+        <div *ngIf="showTasksMenu">
+          <button (click)="navigateTo('/tasks')">Display</button>
+          <button (click)="navigateTo('/tasks/create')">Create</button>
+        </div>
+      </div>
+
+      <div class="sidebar-button" (click)="navigateTo('/support')">
+        <i class="fas fa-life-ring"></i>
+      </div>
+
+      <div class="sidebar-button" (click)="navigateTo('/reminders')">
+        <i class="fas fa-bell"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+

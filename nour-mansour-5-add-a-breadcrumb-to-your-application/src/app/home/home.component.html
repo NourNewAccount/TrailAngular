@@ -1,0 +1,18 @@
+<div class="container mt-4">
+  <div
+    class="jumbotron"
+    *ngIf="isAuthenticated$ | async as isAuthenticated; else authComponent"
+  >
+    <h1 class="display-4">
+      Welcome to the Home Page, {{ username$ | async }}!
+    </h1>
+    <p class="lead">
+      This is a simple Angular CRUD app with Bootstrap styling.
+    </p>
+    <hr class="my-4" />
+    <p>Feel free to explore the app using the navigation links.</p>
+    <button (click)="logout()">Logout</button>
+  </div>
+</div>
+
+<ng-template #authComponent> </ng-template>

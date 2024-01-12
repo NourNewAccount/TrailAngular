@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  <div *ngIf="task" class="task-details">
+    <h2>{{ task.title }}</h2>
+    <p>
+      Description <strong>{{ task.description }}</strong>
+    </p>
+    <p>
+      Deadline <strong>{{ task.deadline | date : "mediumDate" }}</strong>
+    </p>
+    <p>
+      Status <strong>{{ task.isComplete ? "Complete" : "Incomplete" }}</strong>
+    </p>
+  </div>
+  <div *ngIf="!task" class="no-task">
+    <p>No task details available.</p>
+  </div>
+</div>

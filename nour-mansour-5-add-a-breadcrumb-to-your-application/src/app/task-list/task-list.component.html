@@ -1,0 +1,40 @@
+<div class="container mt-4">
+  <h2>Task List</h2>
+  <ng-container *ngIf="tasks.length > 0; else noTasks">
+    <div class="list-group">
+      <div *ngFor="let task of tasks" class="list-group-item p-4">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{ task.title }}</h5>
+          <small
+            >Status: {{ task.isComplete ? "Complete" : "Incomplete" }}</small
+          >
+        </div>
+        <p class="mb-1">{{ task.description }}</p>
+        <small>Deadline: {{ task.deadline | date : "mediumDate" }}</small>
+        <div class="d-flex justify-content-between align-items-center mt-2">
+          <button class="btn btn-primary" (click)="openViewModal(+task.id)">
+            View
+          </button>
+          <button class="btn btn-warning" (click)="openUpdateModal(+task.id)">
+            Update
+          </button>
+          <button
+            class="btn btn-danger"
+            (click)="openApproveDeleteModal(+task.id)"
+          >
+            Delete 
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- create task button -->
+  <button mat-fab class="fixed-button" (click)="openCreateModal()">
+    <mat-icon>+</mat-icon>
+  </button>
+
+  <ng-template #noTasks>
+    <div class="alert alert-info mt-2">No tasks available.</div>
+  </ng-template>
+</div>

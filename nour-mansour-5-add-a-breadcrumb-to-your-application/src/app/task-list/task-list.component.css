@@ -1,0 +1,15 @@
+.fixed-button {
+  position: fixed;
+  bottom: 25px;
+  right: 23px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  background-color: #0d6efd;
+  border: none;
+}
+
+.fixed-button mat-icon {
+  color: white;
+  font-weight: bold;
+  margin: 0;
+}

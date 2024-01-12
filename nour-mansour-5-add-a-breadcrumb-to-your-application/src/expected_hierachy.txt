@@ -1,0 +1,111 @@
+E:.
+│   custom-theme.scss
+│   favicon.ico
+│   file_hierarchy.txt
+│   index.html
+│   main.server.ts
+│   main.ts
+│   styles.css
+│   
+├───app
+│   │   app-routing.module.ts
+│   │   app.component.css
+│   │   app.component.html
+│   │   app.component.spec.ts
+│   │   app.component.ts
+│   │   app.config.server.ts
+│   │   app.config.ts
+│   │   app.routes.ts
+│   │   auth.guard.ts
+│   │   
+│   ├───auth
+│   │       auth.actions.ts
+│   │       auth.component.css
+│   │       auth.component.html
+│   │       auth.component.spec.ts
+│   │       auth.component.ts
+│   │       auth.effects.ts
+│   │       auth.reducer.ts
+│   │       auth.selectors.ts
+│   │       auth.service.spec.ts
+│   │       auth.service.ts
+│   │       
+│   ├───delete-confirm
+│   │       delete-confirm.component.css
+│   │       delete-confirm.component.html
+│   │       delete-confirm.component.spec.ts
+│   │       delete-confirm.component.ts
+│   │       
+│   ├───environments
+│   │       environment.ts
+│   │       
+│   ├───home
+│   │       home.component.css
+│   │       home.component.html
+│   │       home.component.spec.ts
+│   │       home.component.ts
+│   │       
+│   ├───models
+│   │       api-response.interface.ts
+│   │       app.state.ts
+│   │       task.ts
+│   │       
+│   ├───page-not-found
+│   │       page-not-found.component.css
+│   │       page-not-found.component.html
+│   │       page-not-found.component.spec.ts
+│   │       page-not-found.component.ts
+│   │       
+│   ├───shared
+│   │   ├───modal
+│   │   │   └───material-modal
+│   │   │           material-modal.component.css
+│   │   │           material-modal.component.html
+│   │   │           material-modal.component.spec.ts
+│   │   │           material-modal.component.ts
+│   │   │           
+│   │   ├───navbar
+│   │   │   └───navbar
+│   │   │           navbar.component.css
+│   │   │           navbar.component.html
+│   │   │           navbar.component.spec.ts
+│   │   │           navbar.component.ts
+│   │   │           
+│   │   └───sidebar
+│   │           sidebar.component.css
+│   │           sidebar.component.html
+│   │           sidebar.component.spec.ts
+│   │           sidebar.component.ts
+│   │           
+│   ├───support
+│   │       support.component.css
+│   │       support.component.html
+│   │       support.component.spec.ts
+│   │       support.component.ts
+│   │       
+│   ├───task-create
+│   │       task-create.component.css
+│   │       task-create.component.html
+│   │       task-create.component.spec.ts
+│   │       task-create.component.ts
+│   │       
+│   ├───task-detail
+│   │       task-detail.component.css
+│   │       task-detail.component.html
+│   │       task-detail.component.spec.ts
+│   │       task-detail.component.ts
+│   │       
+│   ├───task-list
+│   │       task-list.component.css
+│   │       task-list.component.html
+│   │       task-list.component.spec.ts
+│   │       task-list.component.ts
+│   │       
+│   └───task-update
+│           task-update.component.css
+│           task-update.component.html
+│           task-update.component.spec.ts
+│           task-update.component.ts
+│           
+└───assets
+        .gitkeep
